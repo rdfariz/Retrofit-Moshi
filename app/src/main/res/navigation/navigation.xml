@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/miwokFragment">
+
+    <fragment
+        android:id="@+id/miwokFragment"
+        android:name="org.d3if4127.jurnal09.ui.miwok.MiwokFragment"
+        android:label="fragment_miwok"
+        tools:layout="@layout/fragment_miwok" >
+        <action
+            android:id="@+id/action_miwokFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="org.d3if4127.jurnal09.ui.detailMiwok.DetailFragment"
+        android:label="DetailFragment">
+        <argument
+            android:name="selectedProperty"
+            app:argType="org.d3if4127.jurnal09.network.WordListData"/>
+    </fragment>
+</navigation>
